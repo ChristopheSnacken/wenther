@@ -1,0 +1,21 @@
+.inputButton {
+  background-color: #8dc73f;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  height: 30px;
+  border-style: none;
+  font-family: 'Noto Serif JP', sans-serif;
+  margin-top: 20px;
+}
+
+.inputField {
+  font-family: 'Noto Serif JP', sans-serif !important;
+
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+
+}

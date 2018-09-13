@@ -26,3 +26,19 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.home {
+  width: 50%;
+  text-align: center;
+  margin:0 auto;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.Paper {
+  padding: 20px;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: 'Noto Serif JP', sans-serif;
+}

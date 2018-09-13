@@ -12,7 +12,7 @@ class Weather extends React.Component{
     return(
       <div>
 
-          {this.props.country && this.props.city && <p><b>{this.props.city}, {this.props.country}</b></p> }
+          {this.props.country && this.props.city && <h2><b>{this.props.city}, {this.props.country}</b></h2> }
 
           {this.props.all && this.props.all.map(x =>
             <Card>

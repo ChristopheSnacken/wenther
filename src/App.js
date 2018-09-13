@@ -4,6 +4,7 @@ import './App.css';
 import Titles from './components/Titles'
 import Form from './components/Form'
 import Weather from './components/Weather'
+import Paper from '@material-ui/core/Paper';
 
 
   class App extends React.Component {
@@ -88,14 +89,18 @@ import Weather from './components/Weather'
 
    render() {
     return (
-     <div>
-       <Titles />
-       <Form loadWeather={this.getWeather} />
-       <Weather temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          all={this.state.all}
-          error={this.state.error}/>
+     <div className="home">
+
+         <Paper elevation={3} className="Paper">
+           <Titles />
+           <Form loadWeather={this.getWeather} />
+           <Weather temperature={this.state.temperature}
+              city={this.state.city}
+              country={this.state.country}
+              all={this.state.all}
+              error={this.state.error}/>
+          </Paper>
+
      </div>
     )
   }
