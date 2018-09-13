@@ -24,9 +24,9 @@ import Paper from '@material-ui/core/Paper';
       };
 
       const success = async (pos) => {
-      
+
         var crd = pos.coords;
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${crd.latitude}&lon=${crd.longitude}&appid=c6b4119974f75434fad9c40a13358dc5`)
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=c6b4119974f75434fad9c40a13358dc5`)
           .then(res => res.json())
           .then(
             (response) => {
