@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react';
 import './App.css';
 import Titles from './components/Titles'
 import Form from './components/Form'
@@ -24,9 +23,9 @@ import Paper from '@material-ui/core/Paper';
         maximumAge: 0
       };
 
-      function success(pos) {
+      const success = async (pos) => {
+      
         var crd = pos.coords;
-
         fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${crd.latitude}&lon=${crd.longitude}&appid=c6b4119974f75434fad9c40a13358dc5`)
           .then(res => res.json())
           .then(
@@ -43,7 +42,7 @@ import Paper from '@material-ui/core/Paper';
             (error) => {
               this.setState({
                 error: "Could not read your location",
-                error
+
               });
             }
           )
