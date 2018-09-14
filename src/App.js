@@ -26,7 +26,7 @@ import Paper from '@material-ui/core/Paper';
       const success = async (pos) => {
 
         var crd = pos.coords;
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=c6b4119974f75434fad9c40a13358dc5`)
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
           .then(res => res.json())
           .then(
             (response) => {
@@ -66,7 +66,7 @@ import Paper from '@material-ui/core/Paper';
       e.preventDefault();
       const city = e.target.elements.city.value;
       const country = e.target.elements.country.value;
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=c6b4119974f75434fad9c40a13358dc5`);
+      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`);
       const response = await api_call.json();
       console.log(response);
 
